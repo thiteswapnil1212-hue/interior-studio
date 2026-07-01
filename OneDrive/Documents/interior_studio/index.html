@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interior Studio Pune</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="apple-touch-icon" href="/icons/icon-180x180.png" />
+</head>
+<body>
+  <meta name="google-site-verification" content="Vrmrz8dfbIrOZ6ZFqjZGIGTq-0bMFFMZNJ9pdG1TdK4" />
+  <div id="root"></div>
+  <script>
+    // #region agent log
+    fetch("http://127.0.0.1:7663/ingest/b8f5551c-eec6-4ffb-a978-d7c0b3c54bd5", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Debug-Session-Id": "c768d3"
+      },
+      body: JSON.stringify({
+        sessionId: "c768d3",
+        runId: "pre-fix",
+        hypothesisId: "H6_INDEX_SCRIPTS_NOT_EXECUTING",
+        location: "index.html:21",
+        message: "Inline startup script executed",
+        data: {
+          pathname: window.location.pathname,
+          readyState: document.readyState,
+          hasRoot: Boolean(document.getElementById("root"))
+        },
+        timestamp: Date.now()
+      })
+    }).catch(() => {});
+    // #endregion
+  </script>
+  <script defer src="/pwa.js"></script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

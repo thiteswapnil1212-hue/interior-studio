@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard - Interior Studio Pune</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="/icons/icon-180x180.png">
+</head>
+<body class="dashboard-body" data-requires-auth="true">
+    <div class="dashboard-container">
+        
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h2>Interior Studio</h2>
+                <p>login Portal</p>
+            </div>
+            <nav class="sidebar-nav" aria-label="Vendor navigation">
+                <a href="vendor-dashboard.html" class="nav-item active" aria-current="page">
+                    <i class="fas fa-th-large"></i> <span>Dashboard</span>
+                </a>
+                <a href="#my-products" class="nav-item">
+                    <i class="fas fa-box-open"></i> <span>My Products</span>
+                </a>
+                <a href="#add-product" class="nav-item">
+                    <i class="fas fa-plus-circle"></i> <span>Add New</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i> <span>Settings</span>
+                </a>
+                <a href="index.html" class="nav-item logout">
+                    <i class="fas fa-sign-out-alt"></i> <span>Back to Site</span>
+                </a>
+            </nav>
+        </aside>
+
+        
+        <main class="dashboard-main">
+            <header class="main-header">
+                <div class="header-title">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back, <span data-user-email>Vendor</span></p>
+                </div>
+                <div class="user-profile">
+                    <div class="avatar" data-user-initials aria-label="User profile">DP</div>
+                    <button class="dash-logout-btn" type="button" data-action="logout" aria-label="Logout">Logout</button>
+                </div>
+            </header>
+
+            
+            <section class="analytics-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="statProductViews">0</h3>
+                        <p>Total Product Views</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="statCustomerEnquiries">0</h3>
+                        <p>Customer Enquiries</p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="product-manager" id="my-products">
+                <div class="section-header-row">
+                    <h2>My Products</h2>
+                    <a class="btn-gold-sm" href="#add-product"><i class="fas fa-plus"></i> Add Product</a>
+                </div>
+                
+                <div class="pm-grid">
+                    <div class="pm-card" id="add-product">
+                        <div class="pm-card-header">
+                            <h3>Add Product</h3>
+                            <p>All fields are required.</p>
+                        </div>
+
+                        <form class="pm-form" id="productForm" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="pm-name">Product Name *</label>
+                                <input type="text" id="pm-name" name="productName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pm-price">Price *</label>
+                                <input type="text" id="pm-price" name="price" inputmode="decimal" placeholder="e.g. 45999" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pm-contact">Contact Number *</label>
+                                <input type="tel" id="pm-contact" name="contactNumber" autocomplete="tel" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pm-shop">Shop Name *</label>
+                                <input type="text" id="pm-shop" name="shopName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pm-image">Image Upload *</label>
+                                <input type="file" id="pm-image" name="imageFile" accept="image/*" required>
+                            </div>
+
+                            <div class="pm-actions">
+                                <button type="submit" class="btn-gold-sm"><i class="fas fa-plus"></i> Save Product</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="pm-card">
+                        <div class="pm-card-header pm-list-header">
+                            <div>
+                                <h3>Your Product Listings</h3>
+                                <p>Only visible to you (filtered by your account).</p>
+                            </div>
+                            <div class="pm-count" id="productCount" aria-label="Product count"></div>
+                        </div>
+
+                        <div class="pm-empty" id="productEmpty">
+                            <h4>No products yet</h4>
+                            <p>Add your first product using the form.</p>
+                        </div>
+
+                        <div class="pm-products-grid" id="productGrid" aria-live="polite"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-init.js"></script>
+    <script src="auth-bootstrap.js"></script>
+    <script src="vendor-dashboard.js"></script>
+    <script src="pwa.js"></script>
+    </body>
+</html>

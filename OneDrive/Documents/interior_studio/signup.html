@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Interior Studio Pune</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="/icons/icon-180x180.png">
+</head>
+<body class="auth-body" data-redirect-if-auth="true">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a class="brand" href="index.html">Interior Studio Pune</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="auth-link" data-vendor-link>Login</a></li>
+                    <li><a href="signup.html" class="active auth-link">Sign Up</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="auth-main">
+        <section class="auth-shell">
+            <div class="auth-panel">
+                <p class="auth-kicker">Join as a Partner</p>
+                <h1 class="auth-heading">Create your vendor account.</h1>
+                <p class="auth-subtitle">Sign up once, then log in anytime to access your dashboard.</p>
+                <div class="auth-highlights" aria-hidden="true">
+                    <div class="auth-pill">Email + Password</div>
+                    <div class="auth-pill">Firebase Auth</div>
+                    <div class="auth-pill">Secure Login</div>
+                </div>
+            </div>
+
+            <div class="auth-card">
+                <h2 class="auth-title">Sign Up</h2>
+                <p class="auth-help">Fill details to create your account.</p>
+
+                <p id="auth-global-error" class="field-error" aria-live="polite" style="display:none"></p>
+
+                <form class="auth-form" id="signupForm">
+                    <div class="form-group">
+                        <label for="signup-email">Email *</label>
+                        <input type="email" id="signup-email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signup-password">Password *</label>
+                        <input type="password" id="signup-password" name="password" autocomplete="new-password" required>
+                    </div>
+
+                    <div class="auth-actions">
+                        <button type="submit" class="primary-btn btn-borderless">Create Account</button>
+                        <a class="secondary-btn btn-inline" href="login.html">Already have an account?</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="firebase-init.js"></script>
+    <script src="auth-bootstrap.js"></script>
+    <script src="auth-signup.js"></script>
+    <script src="pwa.js"></script>
+</body>
+</html>

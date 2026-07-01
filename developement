@@ -1,0 +1,181 @@
+# interior-studio 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interior Studio Pune</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f3efe9; /* soft aesthetic beige */
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #2e2e2e, #1a1a1a); /* modern dark gradient */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            letter-spacing: 1px;
+        }
+        .insta-link {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: #e1306c;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        nav {
+            background: #3b3b3b;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        nav a:hover { color: #e6c9a8; } {
+            color: #f5f5f5;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .hero {
+            background: url('https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg') no-repeat center/cover;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.4rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        .card {
+            background: #ffffff;
+            width: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            margin-top: 50px;
+            background: #2b2b2b;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interior Studio Pune</h1>
+        
+        <p>Attractive Curtains • Premium Sofas • Bed Panels • Full Home Interior</p>
+
+        <a class="insta-link" href="https://www.instagram.com/swapnil__1212_/" target="_blank">Instagram</a>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Interior Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero" id="home">
+        Transform Your Home Interior With Style
+    </div>
+
+    <div class="section" id="services">
+        <h2>Our Interior Gallery</h2>
+        <p>Premium designs for your complete home</p>
+
+        <div class="services">
+
+            
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg" alt="Sofa">
+                <h3>Premium Sofa Designs</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg" alt="Kitchen">
+                <h3>Modular Kitchen</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg" alt="Bed Panel">
+                <h3>Bed Panel Designs</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1457847/pexels-photo-1457847.jpeg" alt="Wardrobe">
+                <h3>Modern Wardrobes</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/3705525/pexels-photo-3705525.jpeg" alt="Wall Decor">
+                <h3>Wall Decoration</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" alt="TV Unit">
+                <h3>TV Unit Designs</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg" alt="Interior">
+                <h3>Full Home Interior</h3>
+            </div>
+
+            <div class="card">
+                <img src="https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg" alt="Office Interior">
+                <h3>Office Interior</h3>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> 8208811046</p>
+        <p><strong>Email:</strong> thiteswapnil1212@gmail.com</p>
+        <p>We are always ready to design your dream home.<br><br><strong>Owner:</strong> MR. GOVIND BALIRAM THITE</p>
+    </div>
+
+    <footer>
+        © 2025 Interior Studio Pune - All Rights Reserved
+    </footer>
+</body>
+</html>
